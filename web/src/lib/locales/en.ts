@@ -1,0 +1,73 @@
+const en = {
+  'app.tagline': 'All your music in one place',
+
+  'offline.title': 'Akoyo is not responding',
+  'offline.text': 'Make sure Akoyo is running on your computer, then try again.',
+  'offline.retry': 'Try again',
+
+  'auth.setup.title': 'Welcome to Akoyo',
+  'auth.setup.subtitle': 'Create the first account. It will be able to manage Akoyo for everyone at home.',
+  'auth.setup.submit': 'Create account',
+  'auth.login.title': 'Welcome back',
+  'auth.login.subtitle': 'Sign in to listen to your music.',
+  'auth.login.submit': 'Sign in',
+  'auth.login.switch': 'New here?',
+  'auth.login.switchAction': 'Create an account',
+  'auth.register.title': 'Create your account',
+  'auth.register.subtitle': 'Your own library, your own likes, your own services.',
+  'auth.register.submit': 'Create account',
+  'auth.register.switch': 'Already have an account?',
+  'auth.register.switchAction': 'Sign in',
+  'auth.username': 'Username',
+  'auth.password': 'Password',
+  'auth.passwordConfirm': 'Repeat password',
+  'auth.usernameHint': '3–32 letters, numbers, dots, dashes or underscores',
+  'auth.passwordHint': 'At least 8 characters',
+
+  'nav.search': 'Search',
+  'nav.liked': 'Liked songs',
+  'nav.settings': 'Settings',
+
+  'search.placeholder': 'What do you want to listen to?',
+  'search.emptyTitle': 'Search all your music at once',
+  'search.emptyText': 'Connect a music service in Settings, and results from every service will show up here together.',
+  'search.connectAction': 'Connect a service',
+
+  'liked.title': 'Liked songs',
+  'liked.count': '{count} songs',
+  'liked.col.title': 'Title',
+  'liked.col.album': 'Album',
+  'liked.col.platform': 'Platform',
+  'liked.col.added': 'Added',
+  'liked.emptyTitle': 'Songs you like will appear here',
+  'liked.emptyText': 'Tap ❤️ on any song from any service to save it to your library.',
+
+  'player.idle': 'Nothing is playing',
+
+  'settings.title': 'Settings',
+  'settings.account': 'Account',
+  'settings.admin': 'Administrator',
+  'settings.signOut': 'Sign out',
+  'settings.language': 'Language',
+  'settings.services': 'Music services',
+  'settings.servicesText': 'Connect the services you use. You can connect as many as you like.',
+  'settings.connect': 'Connect',
+  'settings.comingSoon': 'Coming soon',
+  'settings.experimental': 'Experimental',
+  'settings.offline': 'Offline music',
+  'settings.offlineText': 'Choose how much music Akoyo keeps on this computer. Available in an upcoming version.',
+  'settings.about': 'About',
+  'settings.version': 'Version {version}',
+
+  'error.invalid_credentials': 'Wrong username or password.',
+  'error.username_taken': 'This username is already taken.',
+  'error.invalid_username': 'Username must be 3–32 letters, numbers, dots, dashes or underscores.',
+  'error.weak_password': 'Password must be at least 8 characters.',
+  'error.password_mismatch': 'Passwords don’t match.',
+  'error.not_signed_in': 'Please sign in again.',
+  'error.network': 'Can’t reach Akoyo. Is it still running?',
+  'error.internal': 'Something went wrong. Please try again.',
+};
+
+export type MessageKey = keyof typeof en;
+export default en;

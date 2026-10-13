@@ -196,7 +196,36 @@ Akoyo uses your accounts the way a normal music app would — for listening to y
 
 ### Building from source
 
-> 🚧 Build instructions will be added once the project skeleton lands.
+You'll need [Rust](https://rustup.rs) (stable) and [Node.js](https://nodejs.org) 20+.
+
+```bash
+# 1. Build the web UI (it gets embedded into the executable)
+cd web
+npm install
+npm run build
+cd ..
+
+# 2. Build and run Akoyo
+cargo run              # debug build, with a console window
+cargo build --release  # target/release/akoyo.exe — the file that ships
+```
+
+Working on the UI? Keep `cargo run` going and start `npm run dev` in `web/` — Vite serves the UI with hot reload and forwards `/api` to the backend on port 7700.
+
+**Useful environment variables**
+
+| Variable | What it does |
+|---|---|
+| `AKOYO_DATA_DIR` | Where to keep the database, settings and logs. Default: `%LOCALAPPDATA%\Akoyo` |
+| `AKOYO_LOG` | Log filter, e.g. `debug` or `akoyo=trace` |
+
+**Project layout**
+
+```
+src/            Rust backend (Axum server, auth, tray icon)
+migrations/     SQLite schema, applied automatically on start
+web/            Svelte web UI, built into web/dist and embedded into the binary
+```
 
 ### Contributing
 

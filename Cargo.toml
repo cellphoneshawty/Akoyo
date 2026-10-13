@@ -1,0 +1,40 @@
+[package]
+name = "akoyo"
+version = "0.1.0"
+edition = "2024"
+description = "All your music libraries in one place"
+license = "AGPL-3.0-or-later"
+repository = "https://github.com/cellphoneshawty/Akoyo"
+publish = false
+
+[dependencies]
+anyhow = "1"
+argon2 = "0.5"
+axum = "0.8"
+axum-extra = { version = "0.10", features = ["cookie"] }
+directories = "6"
+getrandom = "0.3"
+hex = "0.4"
+mime_guess = "2"
+rust-embed = "8"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+sha2 = "0.10"
+sqlx = { version = "0.8", default-features = false, features = ["runtime-tokio", "sqlite", "macros", "migrate"] }
+tao = "0.34"
+thiserror = "2"
+time = "0.3"
+tokio = { version = "1", features = ["rt-multi-thread", "macros", "net", "sync", "time"] }
+toml = "0.8"
+tracing = "0.1"
+tracing-appender = "0.2"
+tracing-subscriber = { version = "0.3", features = ["env-filter"] }
+tray-icon = "0.21"
+webbrowser = "1"
+
+[target.'cfg(windows)'.dependencies]
+windows-sys = { version = "0.59", features = ["Win32_Foundation", "Win32_UI_WindowsAndMessaging"] }
+
+[profile.release]
+lto = "thin"
+strip = true
